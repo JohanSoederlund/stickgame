@@ -24,7 +24,7 @@ class AIPlayer {
 					echo "<p>AIPlayer - \"Grr...\" </p>";
 				} else {
 					$drawInteger = $difference;
-					echo "<p>AIPlayer - \"Got you, you have already lost!!!\"</p>  ";
+					echo "<p>AIPlayer - \"Got you, I know you will lose!!!\"</p>  ";
 				}
 				break;
 			}

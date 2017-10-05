@@ -2,9 +2,7 @@
 
 namespace model;
 
-require_once("model/StickSelection.php");
-require_once("model/AIPlayer.php");
-require_once("model/PersistantSticks.php");
+
 
 class LastStickGame {
 	
@@ -25,7 +23,7 @@ class LastStickGame {
 	}	
 
 	private function AIPlayerTurn(StickGameObserver $observer) {
-		$sticksLeft = $this->getNumberOfSticks();
+		$sticksLeft = $this->sticks->getNumberOfSticks();
 		$selection = $this->ai->getSelection($sticksLeft);
 		
 		$this->sticks->removeSticks($selection);
@@ -47,7 +45,7 @@ class LastStickGame {
 	* @return int
 	*/
 	public function getNumberOfSticks() {
-		return $this->sticks->getNumberOfSticks();
+		return ;
 	}
 
 	public function newGame() {
