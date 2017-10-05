@@ -42,7 +42,7 @@ class GameController {
 	* Called when game is still running
 	*/
 	private function playGame() {
-		if ($this->playerSelectSticks()) {
+		if ($this->view->getSelectSticks()) {
 			try {
 				$sticksDrawnByPlayer = $this->getNumberOfSticks();
 				$this->game->playerSelectsSticks($sticksDrawnByPlayer, $this->view);
@@ -52,22 +52,11 @@ class GameController {
 		}
 	}
 	private function doGameOver() {
-		if ($this->playerStartsOver()) {
+		if ($this->view->getPlayerStartsOver()) {
 			$this->game->newGame();
 		}		
 	}
-	/** 
-	* @return boolean
-	*/
-	private function playerSelectSticks() {
-		return isset($_GET["draw"]);
-	}
-	/** 
-	* @return boolean
-	*/
-	private function playerStartsOver() {
-		return isset($_GET["startOver"]);
-	}
+	
 	/** 
 	* @return \model\StickSelection
 	*/

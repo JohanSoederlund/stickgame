@@ -3,6 +3,8 @@ namespace view;
 require_once("model/StickGameObserver.php");
 class GameView implements \model\StickGameObserver {
 	const StartingNumberOfSticks = 22;
+	private $selectSticks = "draw";
+	private $playerStartsOver = "startOver";
 	/** 
 	* @var integer
 	*/
@@ -17,6 +19,15 @@ class GameView implements \model\StickGameObserver {
 	public function playerLoose() {
 		$this->playerWon = false;
 	}
+	public function getSelectSticks() {
+		return isset($_GET[$this->selectSticks]);
+	}
+
+	public function getPlayerStartsOver() {
+		return isset($_GET[$this->playerStartsOver]);
+	}
+	
+	
 	/**
 	 * Sets the number of sticks the AI player did
 	 * @param  modelStickSelection $sticks 
