@@ -2,7 +2,7 @@
 
 namespace controller;
 
-class PlayGame {
+class GameController {
 	/**
 	 * @var \model\LastStickGame
 	 */

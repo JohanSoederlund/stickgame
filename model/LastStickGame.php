@@ -23,7 +23,7 @@ class LastStickGame {
 	}	
 
 	private function AIPlayerTurn(StickGameObserver $observer) {
-		$sticksLeft = $this->sticks->getNumberOfSticks();
+		$sticksLeft = $this->getNumberOfSticks();
 		$selection = $this->ai->getSelection($sticksLeft);
 		
 		$this->sticks->removeSticks($selection);
@@ -45,7 +45,7 @@ class LastStickGame {
 	* @return int
 	*/
 	public function getNumberOfSticks() {
-		return ;
+		return $this->sticks->getNumberOfSticks();
 	}
 
 	public function newGame() {
