@@ -1,3 +1,3 @@
-# stickgame 
+# Stickgame 
 
 
